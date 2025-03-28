@@ -4,6 +4,11 @@ import { Protected } from './Protected';
 import { EmptyPage } from './EmptyPage';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import { PageConcepts } from './PageConcepts';
+import { PageChallenges } from './PageChallenges';
+import { PageSolutions } from './PageSolutions';
+import { PageAchievements } from './PageAchievements';
+import { PageReferences } from './PageReferences';
 
 // Tạo theme cho ứng dụng
 const theme = createTheme({
@@ -41,6 +46,11 @@ function App() {
         <Routes>
           <Route element={<Protected />}>
             <Route path="/" element={<PageHome />} />
+            <Route path="/concepts" element={<PageConcepts />} />
+            <Route path="/challenges" element={<PageChallenges />} />
+            <Route path="/solutions" element={<PageSolutions />} />
+            <Route path="/achievements" element={<PageAchievements />} />
+            <Route path="/references" element={<PageReferences />} />
             <Route path="*" element={<EmptyPage />} />
           </Route>
         </Routes>
