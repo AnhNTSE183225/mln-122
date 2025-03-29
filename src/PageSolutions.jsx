@@ -398,7 +398,7 @@ export const PageSolutions = () => {
                                     variant="contained"
                                     size="large"
                                     component={RouterLink}
-                                    to="/achievements"
+                                    to="/thanh-tuu"
                                     endIcon={<EmojiEventsIcon />}
                                     sx={{
                                         bgcolor: 'white',

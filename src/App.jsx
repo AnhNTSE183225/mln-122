@@ -46,11 +46,11 @@ function App() {
         <Routes>
           <Route element={<Protected />}>
             <Route path="/" element={<PageHome />} />
-            <Route path="/concepts" element={<PageConcepts />} />
-            <Route path="/challenges" element={<PageChallenges />} />
-            <Route path="/solutions" element={<PageSolutions />} />
-            <Route path="/achievements" element={<PageAchievements />} />
-            <Route path="/references" element={<PageReferences />} />
+            <Route path="/khai-niem" element={<PageConcepts />} />
+            <Route path="/thach-thuc" element={<PageChallenges />} />
+            <Route path="/giai-phap" element={<PageSolutions />} />
+            <Route path="/thanh-tuu" element={<PageAchievements />} />
+            <Route path="/tham-khao" element={<PageReferences />} />
             <Route path="*" element={<EmptyPage />} />
           </Route>
         </Routes>

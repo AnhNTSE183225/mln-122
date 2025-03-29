@@ -66,7 +66,7 @@ export const PageChallenges = () => {
             title: 'Phân hóa xã hội',
             icon: <PeopleIcon />,
             description: 'Lợi ích từ hội nhập có thể phân chia không đồng đều, làm gia tăng phân hóa xã hội và các vấn đề xã hội.',
-            image: 'https://hdll.vn/FileUpload/Images/laodongvieclam.jpg',
+            image: 'https://media.vietnamplus.vn/images/fa2bb207fd17be03581ee0a8982370eae1375cf79029b5825fd01e87661e00eafdba354da8f3694877205e8acc37dc7e9ae17456e7e18781897530f1fcefd4b5535d00cf23f7dca553dd1fa303cf6417fac3c8bbce0d98bc3914f5dc6cbea960/ttxvn-khu-cong-nghe-cao-thanh-pho-ho-chi-minh-resize.jpg.webp',
             details: [
                 'Khoảng cách giàu nghèo gia tăng giữa các nhóm dân cư',
                 'Bất bình đẳng trong tiếp cận cơ hội việc làm và nguồn lực',
@@ -81,7 +81,7 @@ export const PageChallenges = () => {
             title: 'Lợi ích nhóm',
             icon: <GroupsIcon />,
             description: 'Lợi ích nhóm có thể chi phối quá trình ra quyết định, đặc biệt khi có sự liên kết với các yếu tố nước ngoài.',
-            image: 'https://file.qdnd.vn/data/images/0/2020/07/01/phucthang/nhom-loi-ich-dang-dua-dat-nuoc-dung-truoc-nhung-nguy-co-kho-luong.jpg?dpi=150&quality=100&w=575',
+            image: 'https://bcp.cdnchinhphu.vn/334894974524682240/2025/2/21/47710538611431357842741412546189749895259445n-17401159143151231520052.jpg',
             details: [
                 'Các nhóm lợi ích can thiệp vào quá trình hoạch định chính sách',
                 'Ưu tiên lợi ích cục bộ hơn lợi ích quốc gia',
@@ -96,7 +96,7 @@ export const PageChallenges = () => {
             title: 'Suy giảm chủ quyền',
             icon: <SecurityIcon />,
             description: 'Hội nhập không hiệu quả có thể làm suy giảm độc lập, tự chủ và chủ quyền quốc gia.',
-            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQboHmdKFupWUmEMqqzb-EBpX_MY1mdst4pCg&s',
+            image: 'https://nld.mediacdn.vn/291774122806476800/2024/10/12/img6424-17192311635731095987289-17287054725601108946621.jpg',
             details: [
                 'Giảm khả năng kiểm soát các chính sách kinh tế',
                 'Áp lực từ các tổ chức quốc tế và hiệp định thương mại',
@@ -111,7 +111,7 @@ export const PageChallenges = () => {
             title: 'Quan niệm cứng nhắc',
             icon: <CategoryIcon />,
             description: 'Tuyệt đối hóa hoặc quan niệm cứng nhắc về độc lập, tự chủ sẽ ngăn cản hội nhập, bỏ lỡ thời cơ.',
-            image: 'https://s-aicmscdn.vietnamhoinhap.vn/thumb/w_1000/vnhn-media/21/4/16/ktqt.jpg',
+            image: 'https://vstatic.vietnam.vn/vietnam/resource/IMAGE/2025/1/19/15a8b165e349473d89fe6638fdad99fb',
             details: [
                 'Khép kín nền kinh tế, từ chối các cơ hội hợp tác',
                 'Không chấp nhận các thay đổi cần thiết để thích ứng',
@@ -366,8 +366,8 @@ export const PageChallenges = () => {
                                 </p>
                             </div>
                             <div className="cta-button" style={{ flex: '1 1 100%', textAlign: 'center' }}>
-                                <a 
-                                    href="/solutions"
+                                <Link
+                                    to="/giai-phap" 
                                     style={{
                                         display: 'inline-flex',
                                         alignItems: 'center',
@@ -385,7 +385,7 @@ export const PageChallenges = () => {
                                 >
                                     Khám Phá Giải Pháp
                                     <span style={{ marginLeft: '8px', display: 'inline-flex' }}><ArrowForwardIcon /></span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
 
