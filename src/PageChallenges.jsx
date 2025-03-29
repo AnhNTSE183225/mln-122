@@ -81,7 +81,7 @@ export const PageChallenges = () => {
             title: 'Lợi ích nhóm',
             icon: <GroupsIcon />,
             description: 'Lợi ích nhóm có thể chi phối quá trình ra quyết định, đặc biệt khi có sự liên kết với các yếu tố nước ngoài.',
-            image: 'https://bcp.cdnchinhphu.vn/334894974524682240/2025/2/21/47710538611431357842741412546189749895259445n-17401159143151231520052.jpg',
+            image: 'https://file.qdnd.vn/data/images/0/2020/07/01/phucthang/nhom-loi-ich-dang-dua-dat-nuoc-dung-truoc-nhung-nguy-co-kho-luong.jpg?dpi=150&quality=100&w=575',
             details: [
                 'Các nhóm lợi ích can thiệp vào quá trình hoạch định chính sách',
                 'Ưu tiên lợi ích cục bộ hơn lợi ích quốc gia',
@@ -244,7 +244,7 @@ export const PageChallenges = () => {
                                         }}
                                     />
                                 </div>
-                                
+
                                 {/* Content Section */}
                                 <div className="challenge-content" style={{
                                     padding: '24px'
@@ -348,7 +348,7 @@ export const PageChallenges = () => {
                             background: 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%)',
                             zIndex: 1
                         }}></div>
-                        
+
                         <div style={{
                             display: 'flex',
                             flexWrap: 'wrap',
@@ -367,7 +367,7 @@ export const PageChallenges = () => {
                             </div>
                             <div className="cta-button" style={{ flex: '1 1 100%', textAlign: 'center' }}>
                                 <Link
-                                    to="/giai-phap" 
+                                    to="/giai-phap"
                                     style={{
                                         display: 'inline-flex',
                                         alignItems: 'center',
@@ -422,7 +422,7 @@ export const PageChallenges = () => {
                     }
                     
                     .challenge-image {
-                        height: 300px !important;
+                        height: 500px !important;
                     }
                     
                     .cta-section {
