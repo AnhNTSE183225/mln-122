@@ -21,15 +21,29 @@ import GroupsIcon from '@mui/icons-material/Groups';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import MouseTrail from './MouseTrail';
 import FlipBook from './FlipBook';
+import Fireworks from './Fireworks';
 
 
 export const PageHome = () => {
   const theme = useTheme();
   const [scrollY, setScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [showFireworks, setShowFireworks] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Show fireworks after a slight delay to ensure the page is loaded first
+    const initialFireworksTimer = setTimeout(() => {
+      setShowFireworks(true);
+      
+      // Hide fireworks after duration
+      setTimeout(() => {
+        setShowFireworks(false);
+      }, 12000); // Much longer duration for the EPIC fireworks show
+    }, 800);
+    
+    return () => clearTimeout(initialFireworksTimer);
   }, []);
 
   // Hiệu ứng gradient background
@@ -66,6 +80,15 @@ export const PageHome = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [isVisible]);
+
+  // Function to trigger fireworks
+  // Function to trigger fireworks
+  const handleShowFireworks = () => {
+    setShowFireworks(true);
+    setTimeout(() => {
+      setShowFireworks(false);
+    }, 12000); // Much longer duration for the EPIC fireworks show
+  };
 
   // Nội dung cho FlipBook
   const bookPages = [
@@ -194,6 +217,9 @@ export const PageHome = () => {
     <Box sx={{ pb: 8 }}>
       {/* Mouse Trail Effect */}
       <MouseTrail />
+      
+      {/* Fireworks Effect - with transparent overlay */}
+      {showFireworks && <Fireworks duration={12000} />}
 
       {/* Add keyframes for animations */}
       <Box sx={{
@@ -305,7 +331,10 @@ export const PageHome = () => {
                     animation: 'none',
                   }
                 }}
-                onClick={() => window.scrollTo({ top: 500, behavior: 'smooth' })}
+                onClick={() => {
+                  window.scrollTo({ top: 500, behavior: 'smooth' });
+                  handleShowFireworks(); // Trigger fireworks when clicking the button
+                }}
               >
                 Đọc Sách
               </Button>
@@ -419,6 +448,7 @@ export const PageHome = () => {
                   to="/thach-thuc"
                   endIcon={<GroupsIcon />}
                   sx={{ px: 3, py: 1, fontWeight: 600 }}
+                  onClick={handleShowFireworks}
                 >
                   Thách Thức
                 </Button>
@@ -432,6 +462,7 @@ export const PageHome = () => {
                   to="/giai-phap"
                   endIcon={<TrendingUpIcon />}
                   sx={{ px: 3, py: 1, fontWeight: 600 }}
+                  onClick={handleShowFireworks}
                 >
                   Giải Pháp
                 </Button>
@@ -445,6 +476,7 @@ export const PageHome = () => {
                   to="/thanh-tuu"
                   endIcon={<EmojiEventsIcon />}
                   sx={{ px: 3, py: 1, fontWeight: 600 }}
+                  onClick={handleShowFireworks}
                 >
                   Thành Tựu
                 </Button>
