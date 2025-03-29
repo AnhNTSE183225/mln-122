@@ -107,7 +107,7 @@ export const PageSolutions = () => {
             title: 'Tăng cường quan hệ kinh tế đối ngoại và hội nhập quốc tế',
             icon: <PublicIcon />,
             description: 'Việt Nam đã thành công trong việc xây dựng quan hệ đối tác với nhiều nước lớn và tổ chức quốc tế khác nhau (như Mỹ, Trung Quốc, EU, Nga, Nhật Bản, ASEAN) thay vì phụ thuộc vào một đối tác duy nhất. Chiến lược "đa phương hóa, đa dạng hóa" giúp Việt Nam tránh bị lệ thuộc quá mức vào bất kỳ nền kinh tế nào.',
-            image: 'https://media.vietnamplus.vn/images/fa2bb207fd17be03581ee0a8982370eae1375cf79029b5825fd01e87661e00eafdba354da8f3694877205e8acc37dc7e9ae17456e7e18781897530f1fcefd4b5535d00cf23f7dca553dd1fa303cf6417fac3c8bbce0d98bc3914f5dc6cbea960/ttxvn-khu-cong-nghe-cao-thanh-pho-ho-chi-minh-resize.jpg.webp',
+            image: 'https://nld.mediacdn.vn/291774122806476800/2024/10/12/img6424-17192311635731095987289-17287054725601108946621.jpg',
             achievements: [
                 'Ký kết và triển khai nhiều Hiệp định Thương mại Tự do (FTA)',
                 'Thiết lập quan hệ đối tác chiến lược toàn diện với 12 quốc gia',
@@ -122,7 +122,7 @@ export const PageSolutions = () => {
             title: 'Nâng cao năng lực cạnh tranh',
             icon: <TrendingUpIcon />,
             description: 'Việt Nam đã cải cách thể chế, đổi mới hành chính và đẩy mạnh ứng dụng khoa học công nghệ trong sản xuất và quản lý doanh nghiệp. Điều này được thúc đẩy qua các chương trình đào tạo nguồn nhân lực chất lượng cao, giúp doanh nghiệp nội địa nâng cao năng lực cạnh tranh.',
-            image: 'https://nld.mediacdn.vn/291774122806476800/2024/10/12/img6424-17192311635731095987289-17287054725601108946621.jpg',
+            image: 'https://www.tapchicongsan.org.vn/documents/20182/190506806/vna_potal_thu_tuong_pham_minh_chinh_tham_san_giao_dich_chung_khoan_new_york__6114291.jpeg/cfd84f6f-d009-475c-ab7a-d61ce08a29ac?t=1655527771488',
             achievements: [
                 'Cải cách thể chế và đổi mới hành chính',
                 'Đẩy mạnh ứng dụng khoa học công nghệ',

@@ -170,8 +170,7 @@ export const PageAchievements = () => {
                             px: 2
                         }}
                     >
-                        Những con số ấn tượng thể hiện thành tựu phát triển của đất nước trong thời kỳ đổi mới
-                        <br />và hội nhập quốc tế
+                        Những con số ấn tượng thể hiện thành tựu phát triển của đất nước trong thời kỳ đổi mới và hội nhập quốc tế
                     </Typography>
 
                     {/* Phần giới thiệu */}
