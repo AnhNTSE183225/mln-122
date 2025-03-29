@@ -112,7 +112,7 @@ export const PageSolutions = () => {
                 'Ký kết và triển khai nhiều Hiệp định Thương mại Tự do (FTA)',
                 'Thiết lập quan hệ đối tác chiến lược toàn diện với 12 quốc gia',
                 'Tạo cân bằng trong quan hệ kinh tế-chính trị quốc tế',
-                'Giảm phụ thuộc vào một thị trường duy nhất'
+                'Tăng cường sức mạnh thương lượng và định vị quốc tế'
             ],
             details: 'Tới năm 2025 đã có 12 nước có quan hệ đối tác chiến lược toàn diện với Việt Nam là: Trung Quốc (2008); Nga (2012); Ấn Độ (2016); Hàn Quốc (2022); Hoa Kỳ (09/2023); Nhật Bản (11/2023); Úc (03/2024); Pháp (10/2024); Malaysia (11/2024); New Zealand (02/2025); Indonesia (10/03/2025); và Singapore (12/03/2025).',
             background: 'linear-gradient(135deg, rgba(0, 150, 136, 0.05) 0%, rgba(0, 150, 136, 0.01) 100%)'
