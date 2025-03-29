@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { 
-  AppBar, 
-  Box, 
-  Toolbar, 
-  Typography, 
-  Button, 
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  Typography,
+  Button,
   IconButton,
   Drawer,
   List,
@@ -22,11 +22,11 @@ import { Link as RouterLink } from 'react-router';
 
 // Menu items for navigation
 const navItems = [
-  { name: 'Khái Niệm', path: '/concepts' },
-  { name: 'Thách Thức', path: '/challenges' },
-  { name: 'Giải Pháp', path: '/solutions' },
-  { name: 'Thành Tựu', path: '/achievements' },
-  { name: 'Tài Liệu', path: '/references' },
+  { name: 'Khái Niệm', path: '/khai-niem' },
+  { name: 'Thách Thức', path: '/thach-thuc' },
+  { name: 'Giải Pháp', path: '/giai-phap' },
+  { name: 'Thành Tựu', path: '/thanh-tuu' },
+  { name: 'Tài Liệu', path: '/tham-khao' },
 ];
 
 export const Header = () => {
@@ -48,7 +48,7 @@ export const Header = () => {
       <List>
         {navItems.map((item) => (
           <ListItem key={item.name} disablePadding>
-            <ListItemButton 
+            <ListItemButton
               sx={{ textAlign: 'center' }}
               component={RouterLink}
               to={item.path}
@@ -63,9 +63,9 @@ export const Header = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar 
-        position="static" 
-        elevation={2} 
+      <AppBar
+        position="static"
+        elevation={2}
         sx={{
           background: 'linear-gradient(90deg, #d32f2f 0%, #9a0007 100%)',
         }}
@@ -84,14 +84,14 @@ export const Header = () => {
                 <MenuIcon />
               </IconButton>
             )}
-            
+
             <Typography
               variant="h6"
               component={RouterLink}
               to="/"
-              sx={{ 
-                flexGrow: 1, 
-                textDecoration: 'none', 
+              sx={{
+                flexGrow: 1,
+                textDecoration: 'none',
                 color: 'inherit',
                 display: 'flex',
                 alignItems: 'center'
@@ -100,15 +100,15 @@ export const Header = () => {
               <PublicIcon sx={{ mr: 1 }} />
               BIÊN GIỚI MỀM & ĐỘC LẬP TỰ CHỦ
             </Typography>
-            
+
             {!isMobile && (
               <Box sx={{ display: 'flex' }}>
                 {navItems.map((item) => (
-                  <Button 
-                    key={item.name} 
+                  <Button
+                    key={item.name}
                     component={RouterLink}
                     to={item.path}
-                    sx={{ 
+                    sx={{
                       color: 'white',
                       '&:hover': {
                         backgroundColor: 'rgba(255, 255, 255, 0.1)',
@@ -123,7 +123,7 @@ export const Header = () => {
           </Toolbar>
         </Container>
       </AppBar>
-      
+
       {/* Mobile drawer */}
       <Box component="nav">
         <Drawer

@@ -416,7 +416,7 @@ export const PageHome = () => {
                   variant="contained"
                   color="secondary"
                   component={RouterLink}
-                  to="/challenges"
+                  to="/thach-thuc"
                   endIcon={<GroupsIcon />}
                   sx={{ px: 3, py: 1, fontWeight: 600 }}
                 >
@@ -429,7 +429,7 @@ export const PageHome = () => {
                   variant="contained"
                   color="primary"
                   component={RouterLink}
-                  to="/solutions"
+                  to="/giai-phap"
                   endIcon={<TrendingUpIcon />}
                   sx={{ px: 3, py: 1, fontWeight: 600 }}
                 >
@@ -442,7 +442,7 @@ export const PageHome = () => {
                   variant="contained"
                   color="warning"
                   component={RouterLink}
-                  to="/achievements"
+                  to="/thanh-tuu"
                   endIcon={<EmojiEventsIcon />}
                   sx={{ px: 3, py: 1, fontWeight: 600 }}
                 >

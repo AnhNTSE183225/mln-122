@@ -550,7 +550,7 @@ export const PageConcepts = () => {
                             color="primary"
                             size="large"
                             component={RouterLink}
-                            to="/challenges"
+                            to="/thach-thuc"
                             endIcon={<ArrowForwardIcon />}
                             sx={{
                                 px: 4,

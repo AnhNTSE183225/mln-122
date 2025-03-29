@@ -32,7 +32,7 @@ export const PageReferences = () => {
         {
             id: 1,
             title: "Biên giới mềm trong bối cảnh toàn cầu hóa",
-            source: "Luận Tả Só Sáng",
+            source: "Luật Sao Sáng",
             url: "https://luatsaosang.vn/to-tung/hoi-dap-to-tung/tin-tuc/bien-gioi-mem-trong-boi-canh-toan-cau-hoa-hien-nay.html",
             type: "article",
             label: "Bài báo khoa học",
