@@ -1,23 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import {
-    Box,
-    Container,
-    Typography,
-    Paper,
-    Grid,
-    useTheme,
-    Card,
-    CardContent,
-    CardMedia,
-    Button,
-    Avatar,
-    Chip,
-    Divider,
-    List,
-    ListItem,
-    ListItemIcon,
-    ListItemText
-} from '@mui/material';
+import { Link } from 'react-router';
+import MouseTrail from './MouseTrail';
+
+// Import icons (assuming you'd replace these with custom SVGs or font icons)
 import WarningIcon from '@mui/icons-material/Warning';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import PeopleIcon from '@mui/icons-material/People';
@@ -27,18 +12,15 @@ import CategoryIcon from '@mui/icons-material/Category';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import LockIcon from '@mui/icons-material/Lock';
 import ImportExportIcon from '@mui/icons-material/ImportExport';
-import MouseTrail from './MouseTrail';
-import { Link as RouterLink } from 'react-router';
 
 export const PageChallenges = () => {
-    const theme = useTheme();
     const [animateItems, setAnimateItems] = useState([]);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
-    // Hiệu ứng xuất hiện dần các thành phần
+    // Intersection Observer for animations
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
@@ -62,7 +44,7 @@ export const PageChallenges = () => {
 
     const isAnimated = (id) => animateItems.includes(id);
 
-    // Danh sách các thách thức
+    // Challenge data
     const challenges = [
         {
             id: 'challenge-1',
@@ -144,241 +126,333 @@ export const PageChallenges = () => {
     return (
         <>
             <MouseTrail />
-            <Box
-                sx={{
-                    py: 6,
-                    background: '#f5f5f5',
-                    minHeight: '100vh'
-                }}
-            >
-                <Container maxWidth="lg">
-                    {/* Tiêu đề chính */}
-                    <Box
-                        sx={{
-                            textAlign: 'center',
-                            mb: 6
-                        }}
-                    >
-                        <Typography
-                            variant="h3"
-                            component="h1"
-                            sx={{
-                                fontWeight: 700,
-                                color: theme.palette.primary.dark,
-                                mb: 2
-                            }}
-                        >
-                            <WarningIcon sx={{ fontSize: 40, verticalAlign: 'middle', mr: 2 }} />
+            <div className="page-container" style={{
+                paddingTop: '60px',
+                paddingBottom: '60px',
+                background: '#f5f5f5',
+                minHeight: '100vh'
+            }}>
+                <div className="container" style={{
+                    maxWidth: '1200px',
+                    margin: '0 auto',
+                    padding: '0 20px'
+                }}>
+                    {/* Header */}
+                    <div className="header" style={{
+                        textAlign: 'center',
+                        marginBottom: '60px'
+                    }}>
+                        <h1 style={{
+                            fontSize: '2.5rem',
+                            fontWeight: 700,
+                            color: '#1a237e',
+                            marginBottom: '20px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center'
+                        }}>
+                            <span style={{ marginRight: '15px', display: 'inline-flex' }}><WarningIcon /></span>
                             Thách Thức Của Hội Nhập Quốc Tế
-                        </Typography>
-                        <Typography
-                            variant="h6"
-                            color="text.secondary"
-                            sx={{ maxWidth: 800, mx: 'auto', mt: 2 }}
-                        >
+                        </h1>
+                        <h2 style={{
+                            fontSize: '1.2rem',
+                            fontWeight: 400,
+                            color: '#555',
+                            maxWidth: '800px',
+                            margin: '20px auto 0'
+                        }}>
                             Những khó khăn và thách thức mà Việt Nam phải đối mặt khi hội nhập quốc tế trong việc bảo đảm độc lập, tự chủ
-                        </Typography>
-                    </Box>
+                        </h2>
+                    </div>
 
-                    {/* Giới thiệu */}
-                    <Paper
-                        elevation={3}
-                        sx={{
-                            p: 4,
-                            mb: 6,
-                            borderRadius: 2,
-                            bgcolor: '#fff',
-                            background: 'linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%)',
-                            boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-                            border: '1px solid rgba(0,0,0,0.05)'
-                        }}
-                    >
-                        <Typography
-                            variant="body1"
-                            paragraph
-                            sx={{
-                                fontSize: '1.1rem',
-                                lineHeight: 1.8
-                            }}
-                        >
+                    {/* Introduction */}
+                    <div className="intro-paper" style={{
+                        padding: '30px',
+                        marginBottom: '60px',
+                        borderRadius: '8px',
+                        background: 'linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%)',
+                        boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+                        border: '1px solid rgba(0,0,0,0.05)'
+                    }}>
+                        <p style={{
+                            fontSize: '1.1rem',
+                            lineHeight: 1.8,
+                            marginBottom: '20px'
+                        }}>
                             Khi Việt Nam ngày càng hội nhập sâu rộng vào nền kinh tế toàn cầu, mặc dù thu được nhiều thành tựu to lớn,
                             nhưng cũng đối mặt với không ít thách thức trong việc duy trì nền kinh tế độc lập, tự chủ.
                             Nếu không chủ động, sáng tạo tìm ra những phương thức mới phù hợp với hoàn cảnh và các điều kiện
                             hình thành từ quá trình hội nhập quốc tế, thì việc bảo đảm độc lập, tự chủ cũng sẽ gặp nhiều khó khăn.
-                        </Typography>
-                        <Typography
-                            variant="body1"
-                            sx={{
-                                fontSize: '1.1rem',
-                                lineHeight: 1.8,
-                                fontWeight: 500,
-                                color: theme.palette.primary.main
-                            }}
-                        >
+                        </p>
+                        <p style={{
+                            fontSize: '1.1rem',
+                            lineHeight: 1.8,
+                            fontWeight: 500,
+                            color: '#3f51b5',
+                            margin: 0
+                        }}>
                             Dưới đây là các thách thức chính mà Việt Nam phải đối mặt trong quá trình hội nhập quốc tế:
-                        </Typography>
-                    </Paper>
+                        </p>
+                    </div>
 
-                    {/* Danh sách thách thức */}
-                    <Grid container spacing={4}>
+                    {/* Challenges List */}
+                    <div className="challenges-container" style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        width: '100%'
+                    }}>
                         {challenges.map((challenge, index) => (
-                            <Grid item xs={12} key={challenge.id}>
-                                <Card
-                                    id={challenge.id}
-                                    className="animate-item"
-                                    sx={{
-                                        borderRadius: 2,
-                                        overflow: 'hidden',
-                                        border: `1px solid ${challenge.borderColor}`,
-                                        bgcolor: challenge.backgroundColor,
-                                        boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
-                                        transform: isAnimated(challenge.id) ? 'translateY(0)' : 'translateY(50px)',
-                                        opacity: isAnimated(challenge.id) ? 1 : 0,
-                                        transition: 'transform 0.6s ease, opacity 0.6s ease',
-                                        transitionDelay: `${index * 0.1}s`
-                                    }}
-                                >
-                                    <Grid container>
-                                        <Grid item xs={12} md={5}>
-                                            <CardMedia
-                                                component="img"
-                                                image={challenge.image}
-                                                alt={challenge.title}
-                                                sx={{
-                                                    height: '100%',
-                                                    minHeight: 250,
-                                                    objectFit: 'cover'
-                                                }}
-                                            />
-                                        </Grid>
-                                        <Grid item xs={12} md={7}>
-                                            <CardContent sx={{ p: 3, height: '100%' }}>
-                                                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                                                    <Avatar
-                                                        sx={{
-                                                            bgcolor: theme.palette.primary.main,
-                                                            mr: 2
-                                                        }}
-                                                    >
-                                                        {challenge.icon}
-                                                    </Avatar>
-                                                    <Typography variant="h5" component="h2" fontWeight={600}>
-                                                        {challenge.title}
-                                                    </Typography>
-                                                </Box>
+                            <div
+                                id={challenge.id}
+                                key={challenge.id}
+                                className="animate-item challenge-card"
+                                style={{
+                                    width: '80vw',
+                                    maxWidth: '1000px',
+                                    borderRadius: '8px',
+                                    overflow: 'hidden',
+                                    border: `1px solid ${challenge.borderColor}`,
+                                    backgroundColor: challenge.backgroundColor,
+                                    boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
+                                    marginBottom: '30px',
+                                    transform: isAnimated(challenge.id) ? 'translateY(0)' : 'translateY(50px)',
+                                    opacity: isAnimated(challenge.id) ? 1 : 0,
+                                    transition: 'transform 0.6s ease, opacity 0.6s ease',
+                                    transitionDelay: `${index * 0.1}s`,
+                                    display: 'flex',
+                                    flexDirection: 'column'
+                                }}
+                            >
+                                {/* Image Section */}
+                                <div className="challenge-image" style={{
+                                    width: '100%',
+                                    position: 'relative',
+                                    height: '250px'
+                                }}>
+                                    <img
+                                        src={challenge.image}
+                                        alt={challenge.title}
+                                        style={{
+                                            position: 'absolute',
+                                            top: 0,
+                                            left: 0,
+                                            width: '100%',
+                                            height: '100%',
+                                            objectFit: 'cover',
+                                            objectPosition: 'center'
+                                        }}
+                                    />
+                                </div>
+                                
+                                {/* Content Section */}
+                                <div className="challenge-content" style={{
+                                    padding: '24px'
+                                }}>
+                                    <div className="challenge-header" style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        marginBottom: '16px'
+                                    }}>
+                                        <div className="challenge-icon" style={{
+                                            width: '40px',
+                                            height: '40px',
+                                            borderRadius: '50%',
+                                            backgroundColor: '#3f51b5',
+                                            color: 'white',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            marginRight: '16px'
+                                        }}>
+                                            {challenge.icon}
+                                        </div>
+                                        <h3 style={{
+                                            fontSize: '1.5rem',
+                                            fontWeight: 600,
+                                            margin: 0
+                                        }}>
+                                            {challenge.title}
+                                        </h3>
+                                    </div>
 
-                                                <Typography variant="body1" paragraph>
-                                                    {challenge.description}
-                                                </Typography>
+                                    <p style={{
+                                        fontSize: '1rem',
+                                        lineHeight: 1.6,
+                                        marginBottom: '16px'
+                                    }}>
+                                        {challenge.description}
+                                    </p>
 
-                                                <Divider sx={{ my: 2 }} />
+                                    <div className="divider" style={{
+                                        height: '1px',
+                                        backgroundColor: 'rgba(0,0,0,0.12)',
+                                        margin: '16px 0'
+                                    }}></div>
 
-                                                <Typography variant="subtitle1" fontWeight={600} gutterBottom>
-                                                    Biểu hiện cụ thể:
-                                                </Typography>
+                                    <h4 style={{
+                                        fontSize: '1.1rem',
+                                        fontWeight: 600,
+                                        marginBottom: '12px'
+                                    }}>
+                                        Biểu hiện cụ thể:
+                                    </h4>
 
-                                                <List dense>
-                                                    {challenge.details.map((detail, idx) => (
-                                                        <ListItem key={idx} sx={{ py: 0.5 }}>
-                                                            <ListItemIcon sx={{ minWidth: 30 }}>
-                                                                <ArrowForwardIcon fontSize="small" color="primary" />
-                                                            </ListItemIcon>
-                                                            <ListItemText primary={detail} />
-                                                        </ListItem>
-                                                    ))}
-                                                </List>
-                                            </CardContent>
-                                        </Grid>
-                                    </Grid>
-                                </Card>
-                            </Grid>
+                                    <ul className="details-list" style={{
+                                        listStyle: 'none',
+                                        padding: 0,
+                                        margin: 0
+                                    }}>
+                                        {challenge.details.map((detail, idx) => (
+                                            <li key={idx} style={{
+                                                display: 'flex',
+                                                alignItems: 'flex-start',
+                                                marginBottom: '8px',
+                                                padding: '4px 0'
+                                            }}>
+                                                <span style={{
+                                                    color: '#3f51b5',
+                                                    marginRight: '10px',
+                                                    marginTop: '3px'
+                                                }}>
+                                                    <ArrowForwardIcon style={{ fontSize: '16px' }} />
+                                                </span>
+                                                <span>{detail}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
                         ))}
-                    </Grid>
+                    </div>
 
-                    {/* Kết luận và kêu gọi hành động */}
-                    <Paper
-                        elevation={3}
-                        sx={{
-                            p: 4,
-                            mt: 6,
-                            borderRadius: 2,
-                            bgcolor: theme.palette.primary.main,
-                            color: 'white',
+                    {/* Call to action */}
+                    <div className="cta-section" style={{
+                        padding: '30px',
+                        marginTop: '20px',
+                        borderRadius: '8px',
+                        backgroundColor: '#3f51b5',
+                        color: 'white',
+                        position: 'relative',
+                        overflow: 'hidden',
+                        width: '80vw',
+                        maxWidth: '1000px',
+                        margin: '0 auto'
+                    }}>
+                        <div style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            width: '100%',
+                            height: '100%',
+                            background: 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%)',
+                            zIndex: 1
+                        }}></div>
+                        
+                        <div style={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            alignItems: 'center',
                             position: 'relative',
-                            overflow: 'hidden',
-                            '&::before': {
-                                content: '""',
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                width: '100%',
-                                height: '100%',
-                                background: 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%)',
-                                zIndex: 1
-                            }
-                        }}
-                    >
-                        <Grid container spacing={3} alignItems="center">
-                            <Grid item xs={12} md={8}>
-                                <Typography variant="h5" gutterBottom fontWeight={600} sx={{ position: 'relative', zIndex: 2 }}>
+                            zIndex: 2
+                        }}>
+                            <div className="cta-text" style={{ flex: '1 1 100%', marginBottom: '20px' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '12px' }}>
                                     Tìm Hiểu Giải Pháp
-                                </Typography>
-                                <Typography variant="body1" paragraph sx={{ position: 'relative', zIndex: 2 }}>
+                                </h3>
+                                <p style={{ fontSize: '1rem', lineHeight: 1.6, margin: 0 }}>
                                     Mặc dù đối mặt với nhiều thách thức, Việt Nam đã đưa ra nhiều giải pháp sáng tạo để vừa
                                     tận dụng cơ hội từ hội nhập quốc tế, vừa bảo đảm độc lập, tự chủ của đất nước.
-                                </Typography>
-                            </Grid>
-                            <Grid item xs={12} md={4} sx={{ textAlign: 'center' }}>
-                                <Button
-                                    variant="contained"
-                                    size="large"
-                                    component={RouterLink}
-                                    to="/solutions"
-                                    endIcon={<ArrowForwardIcon />}
-                                    sx={{
-                                        bgcolor: 'white',
-                                        color: theme.palette.primary.main,
-                                        px: 3,
-                                        py: 1.5,
+                                </p>
+                            </div>
+                            <div className="cta-button" style={{ flex: '1 1 100%', textAlign: 'center' }}>
+                                <a 
+                                    href="/solutions"
+                                    style={{
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        padding: '12px 24px',
+                                        backgroundColor: 'white',
+                                        color: '#3f51b5',
+                                        textDecoration: 'none',
+                                        borderRadius: '4px',
                                         fontWeight: 600,
-                                        '&:hover': {
-                                            bgcolor: '#f5f5f5'
-                                        },
-                                        position: 'relative',
-                                        zIndex: 2
+                                        fontSize: '1rem',
+                                        cursor: 'pointer',
+                                        transition: 'background-color 0.3s ease'
                                     }}
                                 >
                                     Khám Phá Giải Pháp
-                                </Button>
-                            </Grid>
-                        </Grid>
+                                    <span style={{ marginLeft: '8px', display: 'inline-flex' }}><ArrowForwardIcon /></span>
+                                </a>
+                            </div>
+                        </div>
 
-                        {/* Biểu tượng trang trí */}
-                        <Box
-                            sx={{
-                                position: 'absolute',
-                                bottom: -20,
-                                right: -20,
-                                opacity: 0.1,
-                                zIndex: 1
-                            }}
-                        >
-                            <ImportExportIcon sx={{ fontSize: 120 }} />
-                        </Box>
-                        <Box
-                            sx={{
-                                position: 'absolute',
-                                top: -20,
-                                left: -20,
-                                opacity: 0.1,
-                                zIndex: 1
-                            }}
-                        >
-                            <LockIcon sx={{ fontSize: 100 }} />
-                        </Box>
-                    </Paper>
-                </Container>
-            </Box>
+                        {/* Decorative icons */}
+                        <div style={{
+                            position: 'absolute',
+                            bottom: -20,
+                            right: -20,
+                            opacity: 0.1,
+                            zIndex: 1,
+                            fontSize: '120px'
+                        }}>
+                            <ImportExportIcon style={{ fontSize: 'inherit' }} />
+                        </div>
+                        <div style={{
+                            position: 'absolute',
+                            top: -20,
+                            left: -20,
+                            opacity: 0.1,
+                            zIndex: 1,
+                            fontSize: '100px'
+                        }}>
+                            <LockIcon style={{ fontSize: 'inherit' }} />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Responsive styles */}
+            <style jsx>{`
+                @media (min-width: 768px) {
+                    .challenge-card {
+                        width: 80vw !important;
+                    }
+                    
+                    .challenge-image {
+                        height: 300px !important;
+                    }
+                    
+                    .cta-section {
+                        width: 80vw !important;
+                    }
+                    
+                    .cta-text {
+                        flex: 0 0 70% !important;
+                        max-width: 70% !important;
+                        margin-bottom: 0 !important;
+                    }
+                    
+                    .cta-button {
+                        flex: 0 0 30% !important;
+                        max-width: 30% !important;
+                    }
+                }
+                
+                @media (max-width: 767px) {
+                    .challenge-card {
+                        width: 100vw !important;
+                        max-width: calc(100% - 40px) !important;
+                    }
+                    
+                    .cta-section {
+                        width: 100vw !important;
+                        max-width: calc(100% - 40px) !important;
+                    }
+                }
+            `}</style>
         </>
     );
 };
